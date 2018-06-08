@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+		body{
+			margin:0;
+			background: black;
+		}
+		canvas{
+			margin:0 auto;
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+    <script type="text/javascript" src="phaser.min.js"></script>
+    <script type="text/javascript" src="Menu.js"></script>
+	<script type="text/javascript" src="Level1.js"></script>
+ 	<script type="text/javascript" src="Final.js"></script>
+ 	<script type="text/javascript" src="Level2.js"></script>
+ 	<script type="text/javascript" src="Final2.js"></script>
+  	
+   	<script>
+    	var game=new Phaser.Game(1185,800,Phaser.AUTO,"",{
+    		"preload":preload,
+    		"create":create,
+    		"update":update,
+		});
+		function preload(){
+			
+		}
+		function create(){
+			game.state.add("menu",Menu);
+			game.state.add("lev1",Level1);
+			game.state.add("final",Final);
+			game.state.add("lev2",Level2)
+			game.state.start("lev2");
+            game.state.add("final2",Final2);
+			
+		}
+		function update(){
+			
+		}
+    </script>
+    
+</body>
+</html>
